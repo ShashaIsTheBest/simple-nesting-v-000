@@ -55,7 +55,7 @@ def dennis_ritchies_language
           :languages => ["C"]
         }
      }
-	puts programmer_hash[:dennis_ritchies][:language]
+	puts programmer_hash[:dennis_ritchies][:languages]
 end
 
 def adding_matz
@@ -64,8 +64,6 @@ def adding_matz
 #   :known_for => "Ruby",
 #    :languages => ["LISP", "C"]
 # }
-	programmer_hash[:yukihiro_matsumoto][:known_for] = "Ruby"
-	programmer_hash[:yukihiro_matsumoto][:languages] = ["LISP", "C"]
 	programmer_hash =
  		{
         :grace_hopper => {
@@ -81,12 +79,13 @@ def adding_matz
           :languages => ["C"]
         }
      }
-programmer_hash
+	programmer_hash[:yukihiro_matsumoto][:known_for] = "Ruby"
+	programmer_hash[:yukihiro_matsumoto][:languages] = ["LISP", "C"]
+	puts programmer_hash
 end
 
 def changing_alan
-	alans_new_info = "GUI"
-	programmer_hash[:alan_kay][:known_for] = "GUI"
+	
 	programmer_hash =
  		{
         :grace_hopper => {
@@ -103,11 +102,12 @@ def changing_alan
         }
      }
      #change what Alan Kay is :known_for to the value of the alans_new_info variable.
-		programmer_hash
+		 alans_new_info = "GUI"
+		 programmer_hash[:alan_kay][:known_for] = "GUI"
+		puts programmer_hash
 end
 
 def adding_to_dennis
-	programmer_hash[:dennis_ritchie][:languages] = "Assembly"
 	programmer_hash =
  		{
         :grace_hopper => {
@@ -123,5 +123,6 @@ def adding_to_dennis
           :languages => ["C"]
         }
      }
-	programmer_hash
+	programmer_hash[:dennis_ritchie][:languages] = "Assembly"
+	puts programmer_hash
 end
